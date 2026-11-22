@@ -1,0 +1,13 @@
+name = "arabavs"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "arabavs"
+database_id = "BURAYA_D1_ID_YAZILACAK"   # npx wrangler d1 create arabavs çıktısından
+
+[vars]
+GOOGLE_CLIENT_ID = ""      # Google Cloud Console > OAuth Web Client ID (ücretsiz)
+MIN_SHOWN = "3"            # liderlik tablosuna girmek için gereken minimum gösterim
+# SESSION_SECRET'ı koda yazma: npx wrangler pages secret put SESSION_SECRET
