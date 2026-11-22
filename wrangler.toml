@@ -5,7 +5,7 @@ pages_build_output_dir = "public"
 [[d1_databases]]
 binding = "DB"
 database_name = "arabavs"
-database_id = "BURAYA_D1_ID_YAZILACAK"   # npx wrangler d1 create arabavs çıktısından
+database_id = "c609d1d9-4d1d-4f83-bbc3-c8acc2b0d07b"   # npx wrangler d1 create arabavs çıktısından
 
 [vars]
 GOOGLE_CLIENT_ID = ""      # Google Cloud Console > OAuth Web Client ID (ücretsiz)
