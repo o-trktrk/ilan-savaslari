@@ -40,6 +40,12 @@ wrangler pages secret put SESSION_SECRET                  # uzun rastgele bir me
 **Google girişi:** Google Cloud Console → APIs & Services → Credentials → OAuth client ID (Web). "Authorized JavaScript origins"e site adresini ekle. Client ID'yi `wrangler.toml` içindeki `GOOGLE_CLIENT_ID`'ye yaz ve tekrar `wrangler pages deploy public` çalıştır.
 
 **Yerelde çalıştırma:**
+
+Önce proje kökünde `.dev.vars` dosyası oluştur (API, `SESSION_SECRET` yoksa hata verir). Bu dosya `.gitignore`'da, repoya eklenmez:
+```bash
+echo "SESSION_SECRET=$(openssl rand -hex 32)" > .dev.vars
+```
+Sonra yerel veritabanını hazırlayıp çalıştır:
 ```bash
 wrangler d1 execute arabavs --local --file=schema.sql
 wrangler d1 execute arabavs --local --file=seed.sql

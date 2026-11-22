@@ -1,0 +1,14 @@
+# Yerel secret'lar (SESSION_SECRET vb.) — asla commit'leme
+.dev.vars
+.dev.vars.*
+
+# Bağımlılıklar ve wrangler yerel durumu (yerel D1 dahil)
+node_modules/
+.wrangler/
+
+# Sistem / editör dosyaları
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
