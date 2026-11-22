@@ -1,4 +1,4 @@
-// ArabaVS API — Cloudflare Pages Functions + D1
+// İlan Savaşları API — Cloudflare Pages Functions + D1
 // Yüksek trafik için: havuz + liderlik tablosu edge cache'te tutulur, D1'e sadece oy sayaçları yazılır.
 
 const COLS = `id,brand,model,engine,year,fuel,gear,km,price,body,segment,color,city,

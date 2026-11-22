@@ -158,7 +158,7 @@ async function viewVersus(deep) {
     const { a, b } = data;
     const url = location.origin + location.pathname + `#/v/${a.id}-${b.id}`;
     const text = `${TL(a.price)} bütçen var: ${a.brand} ${a.model} (${a.year}) mı, ${b.brand} ${b.model} (${b.year}) mi? Sen hangisini alırdın?`;
-    try { if (navigator.share) { await navigator.share({ title: 'ArabaVS', text, url }); return; } } catch { return; }
+    try { if (navigator.share) { await navigator.share({ title: 'İlan Savaşları', text, url }); return; } } catch { return; }
     try { await navigator.clipboard.writeText(text + ' ' + url); toast('Link kopyalandı'); } catch { toast(url); }
   }
 }

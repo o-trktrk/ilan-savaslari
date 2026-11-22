@@ -1,4 +1,4 @@
-# ArabaVS
+# İlan Savaşları
 
 Fiyatı birbirine yakın iki ikinci el arabayı karşı karşıya getirip "hangisini alırdın?" diye soran, mobil öncelikli oylama sitesi.
 
@@ -22,17 +22,17 @@ Trafik dostu tasarım:
 
 ## Domain
 
-- Başlangıç: ücretsiz `arabavs.pages.dev` (kart gerekmez).
+- Canlı: `https://ilan-savaslari.pages.dev` (ücretsiz, kart gerekmez). GitHub `main` dalına her push otomatik deploy edilir.
 - Özel alan adı istersen `.com` ≈ 10 $/yıl; Cloudflare Registrar maliyetine satar (ek kâr yok). `.com.tr` için TRABIS/yetkili kayıtçı gerekir.
 
 ## Kurulum (≈ 10 dk)
 
 ```bash
 npm i -g wrangler && wrangler login
-wrangler d1 create arabavs            # çıkan database_id'yi wrangler.toml'a yaz
+wrangler d1 create arabavs            # (D1 adı arabavs kalıyor) çıkan database_id'yi wrangler.toml'a yaz
 wrangler d1 execute arabavs --remote --file=schema.sql
 wrangler d1 execute arabavs --remote --file=seed.sql     # örnek ilanlar (istersen atla)
-wrangler pages project create arabavs --production-branch main
+wrangler pages project create ilan-savaslari --production-branch main
 wrangler pages deploy public
 wrangler pages secret put SESSION_SECRET                  # uzun rastgele bir metin
 ```
