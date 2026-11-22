@@ -46,7 +46,7 @@ async function verify(secret, token) {
     return null;
   }
 }
-const secretOf = (env) => env.SESSION_SECRET || 'dev-only-secret-change-me';
+const secretOf = (env) => { if (!env.SESSION_SECRET) throw new Error('SESSION_SECRET tanimli degil'); return env.SESSION_SECRET; };
 
 async function authUser(request, env) {
   const h = request.headers.get('Authorization') || '';
